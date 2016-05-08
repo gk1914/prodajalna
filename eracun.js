@@ -209,7 +209,8 @@ streznik.post('/prijava', function(zahteva, odgovor) {
     	  Address, City, State, Country, PostalCode, \
     	  Phone, Fax, Email, SupportRepId) \
         VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
-      stmt.run(polja.FirstName, polja.LastName, polja.Company, polja.Adress, polja.City, polja.State, polja.Country, polja.PostalCode, polja.Phone, polja.Fax, polja.Email, 3); 
+      stmt.run(polja.FirstName, polja.LastName, polja.Company, polja.Adress, polja.City, polja.State, polja.Country, polja.PostalCode, polja.Phone, polja.Fax, polja.Email, 3);
+      stmt.finalize();
     } catch (err) {
       napaka2 = true;
     }
